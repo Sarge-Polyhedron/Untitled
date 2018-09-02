@@ -28,3 +28,12 @@ $RECYCLE.BIN/
 
 
 # End of https://www.gitignore.io/api/windows
+
+
+/node_modules/
+/.git/
+/app/css/
+/**/Thumbs.db
+/**/package-lock.json
+/**/.DS_Store
+
