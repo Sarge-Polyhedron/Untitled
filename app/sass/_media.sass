@@ -9,12 +9,96 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-	/**/
+	.topbar
+		height: 60px
+
+	.left_bar
+		width: 50px
+
+	.cblock
+		margin-left: 0
+		
+	.cright_dialogue_right, .cright_dialogue_left
+		.media-body
+			max-width: 320px
+			p 
+				font-size: 14px
+				max-width: 250px
+
+	.cleft_user
+		min-width: 240px
+		&_text
+			p 
+				display: none
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+	
+	.cblock
+		width: 100%
+		max-height: 95vh
+		margin-top: 40px
+		margin-left: 0
+		padding-left: 40px
+		display: flex
+		flex-direction: column
+		.cleft
+			border-bottom: 1px solid #EDF0F4
+			min-height: 30vh
+			max-height: 30vh
+			&_user
+				padding: 12px 20px 8px 20px
+				&_text
+					p 
+						display: block
+		.cright 
+			min-height: 62vh
+			max-height: 62vh
+
+
+	.cright_dialogue_right, .cright_dialogue_left
+		.media-body
+			max-width: 320px
+			p 
+				font-size: 14px
+				max-width: 250px
+		.portrait_block
+			margin-left: 5px
+
+	.topbar
+		height: 40px
+		border-bottom: 1px solid #EDF0F4
+		&_crumbs
+			margin-left: -50px
+			img 
+				margin: 0px 4px
+			span
+				font-size: 12px
+		&_user
+			padding: 5px
+			margin-right: -10px
+			p 
+				font-size: 14px
+
+	.left_bar
+		width: 40px
+
+	.cright
+		&_search, 
+		&_message
+			min-height: 40px
+			button:last-child
+				min-width: 30px
+				height: 30px
+				margin: 4px		
+
+	.cright_dialogue_right, .cright_dialogue_left
+		.media-body
+			max-width: 320px
+			p 
+				font-size: 12px
+				max-width: 250px
 
 
 /* Extra Small Devices, Phones */
