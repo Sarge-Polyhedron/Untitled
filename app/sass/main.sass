@@ -52,7 +52,24 @@ button:focus
 
 // ===============MAIN======================
 
+.button-slide
+	position: absolute
+	display: none
+	top: 0px
+	left: 10px
+	border: none
+	background-color: transparent
+	font-size: 20px
+	padding: 3px 15px
+	cursor: pointer
+	z-index: 1
+	transition: all 0.3s ease
+	&.button-slide_open
+		left: 60px
+
+
 .left_bar 
+	display: block
 	background-color: #01134E
 	position: absolute
 	left: 0
@@ -61,6 +78,9 @@ button:focus
 	min-height: 520px
 	width: 80px
 	z-index: 10
+	transition: all 0.3s ease
+
+
 
 .logo
 	display: block
@@ -73,35 +93,11 @@ button:focus
 	ul
 		list-style-type: none
 		padding: 0
-		li
-			height: 50px
-			margin: 20px 0
-			position: relative
-			a
-				display: block !important
-				height: 100% !important
-				text-align: center
-				i 
-					position: relative
-					color: #8089A6
-					line-height: 50px
-					font-size: 20px
-					.alertcircle
-						position: absolute
-						top: 8px
-						right: -8px
-						height: 18px
-						width: 18px
-						border-radius: 50%
-						background-color: #2A74DB
-						color: #fff
-						font-size: 14px
-						line-height: 18px
-						font-family: 'Roboto', sans-serif
-						font-weight: 400
-						text-align: center
-
-		.active
+	&__item
+		height: 50px
+		margin: 20px 0
+		position: relative
+		&.active
 			&::before
 				content: ''
 				position: absolute
@@ -109,6 +105,31 @@ button:focus
 				height: 100%
 				width: 4px
 				background-color: #0AD69C
+	&__link
+		display: block !important
+		height: 100% !important
+		text-align: center
+		i 
+			position: relative
+			color: #8089A6
+			line-height: 50px
+			font-size: 20px
+			.alertcircle
+				position: absolute
+				top: 8px
+				right: -8px
+				height: 18px
+				width: 18px
+				border-radius: 50%
+				background-color: #2A74DB
+				color: #fff
+				font-size: 14px
+				line-height: 18px
+				font-family: 'Roboto', sans-serif
+				font-weight: 400
+				text-align: center
+
+		
 
 		li:hover
 			a 
@@ -155,6 +176,7 @@ button:focus
 // Central block
 
 .wrap
+	z-index: 0
 	position: absolute
 	top: 0
 	bottom: 0
@@ -174,6 +196,9 @@ button:focus
 	box-shadow: 0px 0px 30px rgba(153, 163, 174, 0.06)
 	border-radius: 4px
 	position: relative
+	transition: padding 0.3s ease
+
+	
 
 .cleft
 	overflow: auto
@@ -324,7 +349,44 @@ button:focus
 					border-left: 20px solid transparent
 
 
+// ------------slideout---------------
+.slideout-menu 
+  position: fixed
+  top: 0
+  bottom: 0
+  width: 256px
+  min-height: 100vh
+  overflow-y: scroll
+  -webkit-overflow-scrolling: touch
+  z-index: 0
+  display: none
 
+
+.slideout-menu-left 
+  left: 0
+
+
+.slideout-menu-right 
+  right: 0
+
+
+.slideout-panel 
+  position: relative
+  z-index: 1
+  will-change: transform
+  background-color: #FFF /* A background-color is required */
+  min-height: 100vh
+
+
+.slideout-open
+.slideout-open body
+.slideout-open .slideout-panel
+  overflow: hidden
+
+
+.slideout-open .slideout-menu 
+  display: block
+// ------------slideout---------------
 
 
 

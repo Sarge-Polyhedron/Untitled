@@ -12,8 +12,9 @@
 	.topbar
 		height: 60px
 
-	.left_bar
-		width: 50px
+	.left_bar 
+		width: 60px
+
 
 	.cblock
 		margin-left: 0
@@ -33,6 +34,9 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+
+	.button-slide
+		display: block
 	
 	.cblock
 		width: 100%
@@ -40,9 +44,11 @@
 		min-height: 480px
 		margin-top: 40px
 		margin-left: 0
-		padding-left: 40px
+		padding-left: 10px
 		display: flex
 		flex-direction: column
+		&.openmenu
+			padding-left: 60px
 		.cleft
 			border-bottom: 1px solid #EDF0F4
 			min-height: 120px
@@ -52,11 +58,14 @@
 				&_text
 					p 
 
-		.cright 
-			min-height: 360px
-			height: 62vh
+	.cright 
+		min-height: 360px
+		height: 62vh
 
-
+	.left_bar
+		transform: translateX(-55px)
+		&.hidemenu
+			transform: translateX(0px)
 
 
 	.cright_dialogue_right, .cright_dialogue_left
@@ -71,8 +80,10 @@
 	.topbar
 		height: 40px
 		border-bottom: 1px solid #EDF0F4
+		justify-content: end
 		&_crumbs
 			margin-left: -50px
+			margin-right: 20px
 			img 
 				margin: 0px 4px
 			span
@@ -82,9 +93,11 @@
 			margin-right: -10px
 			p 
 				font-size: 14px
+	
 
-	.left_bar
-		width: 40px
+
+
+
 
 	.cright
 		&_search, 
@@ -105,7 +118,8 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.topbar_crumbs
+		display: none
 
 
 /* Custom, iPhone Retina */
